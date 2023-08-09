@@ -1,6 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const Libro = require("../models/Libro");
+const { requiredScopes } = require("express-oauth2-jwt-bearer");
+
+
 // Ruta para obtener todos los libros
 router.get("/", async (req, res) => {
   try {
